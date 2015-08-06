@@ -50,7 +50,6 @@
 
     <modules>
         <module>pdfXtk</module>
-        <module>graphwrap</module>
     </modules>
 
 
