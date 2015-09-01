@@ -49,11 +49,11 @@ public class EdgeAttributeComparator implements Comparator<AdjacencyEdge<? exten
 
     /**
      * TODO: check correctness of:
-     * > means 'before'
-     * shorter edge (line spacing) > longer edge
-     * smaller width difference > larger width difference (forget about alignment for now)
-     * smaller font > larger font
-     * same font size > differing font sizes
+     * gt means 'before'
+     * shorter edge (line spacing) gt longer edge
+     * smaller width difference gt larger width difference (forget about alignment for now)
+     * smaller font gt larger font
+     * same font size gt differing font sizes
      * edges that contain non-text segments
      *
      1

@@ -14,7 +14,7 @@ public class MultiLineTooltip {
     private static int DIALOG_TOOLTIP_MAX_SIZE = 65;
 
     /**
-     * Splits a String in order to format a tool tip -> insert break line command
+     * Splits a String in order to format a tool tip into a insert break line command
      * 
       The tool tip you want to format
       formatted tool tip
@@ -25,7 +25,7 @@ public class MultiLineTooltip {
     }
     
     /**
-     * Splits a String in order to format a tool tip -> insert break line command
+     * Splits a String in order to format a tool tip into a insert break line command
      * 
       The tool tip you want to format
       The length after that a new line break should be inserted
