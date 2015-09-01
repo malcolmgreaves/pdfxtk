@@ -78,7 +78,7 @@ public class AdjacencyGraph<T extends GenericSegment>// extends DocumentGraph
 	/**
      * Constructor.
      *
-     * @param to fill in! todo!
+      fill in! todo!
      */
     public AdjacencyGraph()
     // initialize a blank neighbourhood graph

@@ -33,13 +33,13 @@ public class PDF_XMLSerializer {
 	/**
 	 * Serializes the result of a PDF analysis to XML.
 	 * 
-	 * @param savePath The path where you want to save the XML
-	 * @param pdfOutput The output of the PDF analysis process
-	 * @param curFile The current file either the PDF itself or a XML file
-	 * @throws ParserConfigurationException 
-	 * @throws TransformerException 
-	 * @throws IOException 
-	 * @throws SAXException 
+	  The path where you want to save the XML
+	  The output of the PDF analysis process
+	  The current file either the PDF itself or a XML file
+
+
+
+
 	 */
 	public static void serialize(String savePath, List<Page> pdfOutput, File curFile) throws ParserConfigurationException, TransformerException, SAXException, IOException {
 		
@@ -110,11 +110,11 @@ public class PDF_XMLSerializer {
 	/**
 	 * Load a previous analysis result from a XML file.
 	 * 
-	 * @param xml The XML file you want to load
-	 * @return A list of Page objects
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws IOException
+	  The XML file you want to load
+	  list of Page objects
+
+
+
 	 */
 	public static List<Page> deserializeAnalysis(File xml) throws ParserConfigurationException, SAXException, IOException {
 
@@ -176,9 +176,9 @@ public class PDF_XMLSerializer {
 	 * Method for loading a segment from a XML node. Make sure to correctly
 	 * outline each possible segment within this method in order to get a proper loading of the segments.
 	 * 
-	 * @param node The node of the XML structure
-	 * @return A GenericSegment loaded from the XML node
-	 * @throws IOException
+	  The node of the XML structure
+	  GenericSegment loaded from the XML node
+
 	 */
 	private static GenericSegment attrToSegment(Element node) throws IOException {
 		
@@ -235,11 +235,11 @@ public class PDF_XMLSerializer {
 	/**
 	 * Get the path of the PDF file if working with a XML file.
 	 * 
-	 * @param xml The XML file
-	 * @return The path of the PDF document that corresponds to the content of the XML file
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws IOException
+	  The XML file
+	  path of the PDF document that corresponds to the content of the XML file
+
+
+
 	 */
 	public static String getPDFPath(File xml) throws ParserConfigurationException, SAXException, IOException {
 		

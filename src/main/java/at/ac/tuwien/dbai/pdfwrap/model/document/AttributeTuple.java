@@ -14,8 +14,8 @@ public class AttributeTuple {
     /**
      * Constructor method for a attribute tuple
      * 
-     * @param x The attribute name
-     * @param y The attribute value as String
+      The attribute name
+      The attribute value as String
      */
     public AttributeTuple(String x, String y) {
     	
@@ -26,8 +26,8 @@ public class AttributeTuple {
     /**
      * Constructor method for a attribute tuple
      * 
-     * @param x The attribute name
-     * @param y The attribute value as float
+      The attribute name
+      The attribute value as float
      */
     public AttributeTuple(String x, float y) {
     	
@@ -38,8 +38,8 @@ public class AttributeTuple {
     /**
      * Constructor method for a attribute tuple
      * 
-     * @param x The attribute name
-     * @param y The attribute value as int
+      The attribute name
+      The attribute value as int
      */
     public AttributeTuple(String x, int y) {
     	
@@ -50,8 +50,8 @@ public class AttributeTuple {
     /**
      * Constructor method for a attribute tuple
      * 
-     * @param x The attribute name
-     * @param y The attribute value as boolean
+      The attribute name
+      The attribute value as boolean
      */
     public AttributeTuple(String x, boolean y) {
     	
@@ -62,7 +62,7 @@ public class AttributeTuple {
     /**
      * Getter method for the attribute name
      * 
-     * @return Returns the attribute name
+      the attribute name
      */
     public String getAttributeName() {
     	
@@ -72,7 +72,7 @@ public class AttributeTuple {
     /**
      * Getter method for the attribute value
      * 
-     * @return Returns the attribute value
+      the attribute value
      */
     public String getAttributeValue() {
     	

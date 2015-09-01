@@ -48,10 +48,10 @@ public class RectSegment extends GenericSegment
 	/**
      * Constructor.
      *
-     * @param x1 The x1 coordinate of the segment.
-     * @param x2 The x2 coordinate of the segment.
-     * @param y1 The y1 coordinate of the segment.
-     * @param y2 The y2 coordinate of the segment.
+     1 The x1 coordinate of the segment.
+     2 The x2 coordinate of the segment.
+     1 The y1 coordinate of the segment.
+     2 The y2 coordinate of the segment.
      */
 	
 	protected Color fillColor;

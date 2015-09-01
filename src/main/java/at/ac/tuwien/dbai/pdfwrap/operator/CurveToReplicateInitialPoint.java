@@ -54,8 +54,8 @@ public class CurveToReplicateInitialPoint extends OperatorProcessor
 
     /**
      * process : v : Append curved segment to path (initial point replicated).
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      */
     public void process(PDFOperator operator, List arguments) 
     {

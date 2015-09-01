@@ -30,8 +30,8 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * The constructor of a styled Segment.
 	 * 
-	 * @param segment The segment that will be enriched by styling information
-	 * @param style The information about styling
+	  The segment that will be enriched by styling information
+	  The information about styling
 	 */
 	public StyledSegment(GenericSegment segment, Style style) {
 		
@@ -46,9 +46,9 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	 * Calculates and updates the local coordinates with respect to the current
 	 * screen scaling factor.
 	 * 
-	 * @param screenfactor The current screen scaling factor
-	 * @param pageWidth The width of the original PDF page
-	 * @param pageHeight The height of the original PDF page
+	  The current screen scaling factor
+	  The width of the original PDF page
+	  The height of the original PDF page
 	 */
 	public void updateLocalCoordinates(float screenfactor,  float pageWidth, float pageHeight) {
 		
@@ -64,7 +64,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Paint this segment by considering all the given style information.
 	 * 
-	 * @param g2 The Graphics object on which the painting is done
+	 2 The Graphics object on which the painting is done
 	 */
 	public void paintSegments(Graphics2D g2) {
 		
@@ -121,9 +121,9 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Checks whether the point x,y lies within the segment or not.
 	 * 
-	 * @param iX The x coordinate of the point
-	 * @param iY The y coordinate of the point
-	 * @return Returns true if the point lies within the segment, false otherwise
+	  The x coordinate of the point
+	  The y coordinate of the point
+	  true if the point lies within the segment, false otherwise
 	 */
 	public boolean intersects(int iX, int iY) {
 		
@@ -147,8 +147,8 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Checks whether the rectangular intersects the shape of the segment.
 	 * 
-	 * @param rec The rectangular you want to check
-	 * @return Returns true if the rectangular intersects the shape of the segment, false otherwise
+	  The rectangular you want to check
+	  true if the rectangular intersects the shape of the segment, false otherwise
 	 */
 	public boolean intersects(Rectangle2D rec) {
 		
@@ -165,7 +165,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Specifies the selection of the segment.
 	 * 
-	 * @param selected sets the selection flag for this segment
+	  sets the selection flag for this segment
 	 */
 	public void setSelected(boolean selected) {
 		
@@ -175,7 +175,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Checks whether this styled segment is visible or not.
 	 * 
-	 * @return true if this segment is visible, false otherwise
+	  if this segment is visible, false otherwise
 	 */
 	public boolean isVisible() {
 		
@@ -217,7 +217,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Getter method for the underlying segment.
 	 * 
-	 * @return the underlying segment e.g. kind of a {@link GenericSegment}
+	  underlying segment e.g. kind of a {@link GenericSegment}
 	 */
 	public GenericSegment getSegment() {
 		
@@ -227,8 +227,8 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Checks whether the class of this segment and the input segment is equal or not.
 	 * 
-	 * @param seg the segment you want to compare the class with
-	 * @return true if the class of this segment and the input segment equals, false otherwise
+	  the segment you want to compare the class with
+	  if the class of this segment and the input segment equals, false otherwise
 	 */
 	public boolean isClassEqual(StyledSegment seg) {
 		
@@ -238,7 +238,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Getter method for the local y coordinate.
 	 * 
-	 * @return the local y coordinate regarding the current screen settings like window size etc.
+	  local y coordinate regarding the current screen settings like window size etc.
 	 */
 	public float getLocalY() {
 		
@@ -248,7 +248,7 @@ public class StyledSegment implements Comparable<StyledSegment> {
 	/**
 	 * Getter method for the local x coordinate.
 	 * 
-	 * @return the local x coordinate regarding the current screen settings like window size etc.
+	  local x coordinate regarding the current screen settings like window size etc.
 	 */
 	public float getX() {
 		

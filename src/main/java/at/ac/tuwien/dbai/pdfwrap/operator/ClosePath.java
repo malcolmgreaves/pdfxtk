@@ -49,8 +49,8 @@ public class ClosePath extends OperatorProcessor
 {
     /**
      * process : h : Close path.
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      */
     public void process(PDFOperator operator, List arguments) 
     {

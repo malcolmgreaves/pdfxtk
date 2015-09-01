@@ -52,8 +52,8 @@ public class FillEvenOddRule extends OperatorProcessor
 
     /**
      * process : f* : fill path using even odd rule.
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      */
     public void process(PDFOperator operator, List arguments) 
     {

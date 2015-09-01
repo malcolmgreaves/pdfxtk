@@ -53,10 +53,10 @@ public class ShowText extends OperatorProcessor
 
     /**
      * Tj show Show text.
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      *
-     * @throws IOException If there is an error processing this operator.
+      If there is an error processing this operator.
      */
     public void process(PDFOperator operator, List arguments) throws IOException
     {

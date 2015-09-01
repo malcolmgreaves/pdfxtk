@@ -58,10 +58,10 @@ public class ImageSegment extends GenericSegment implements IXHTMLSegment {
     /**
      * Constructor.
      *
-     * @param x1 The x1 coordinate of the segments bounding box.
-     * @param x2 The x2 coordinate of the segments bounding box.
-     * @param y1 The y1 coordinate of the segments bounding box.
-     * @param y2 The y2 coordinate of the segments bounding box.
+     1 The x1 coordinate of the segments bounding box.
+     2 The x2 coordinate of the segments bounding box.
+     1 The y1 coordinate of the segments bounding box.
+     2 The y2 coordinate of the segments bounding box.
      */
     public ImageSegment(
         float x1,

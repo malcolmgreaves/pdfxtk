@@ -65,13 +65,13 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
     /**
      * Constructor.
      *
-     * @param x1
+     1
      *            The x1 coordinate of the segment.
-     * @param x2
+     2
      *            The x2 coordinate of the segment.
-     * @param y1
+     1
      *            The y1 coordinate of the segment.
-     * @param y2
+     2
      *            The y2 coordinate of the segment.
      */
 	public GenericSegment(float x1, float x2, float y1, float y2)
@@ -98,7 +98,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the x1 position of the segment.
 	 * 
-	 * @return The x1 coordinate of the segment.
+	  x1 coordinate of the segment.
 	 */
 	public float getX1()
 	{
@@ -106,7 +106,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	}
 
 	/**
-	 * @param scale
+
 	 *            The x1 to set.
 	 */
 	public void setX1(float x1)
@@ -117,7 +117,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the x2 position of the segment.
 	 * 
-	 * @return The x2 coordinate of the segment.
+	  x2 coordinate of the segment.
 	 */
 	public float getX2()
 	{
@@ -125,7 +125,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	}
 
 	/**
-	 * @param scale
+
 	 *            The x2 to set.
 	 */
 	public void setX2(float x2)
@@ -136,7 +136,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the y1 position of the segment.
 	 * 
-	 * @return The y1 coordinate of the segment.
+	  y1 coordinate of the segment.
 	 */
 	public float getY1()
 	{
@@ -144,7 +144,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	}
 
 	/**
-	 * @param scale
+
 	 *            The y1 to set.
 	 */
 	public void setY1(float y1)
@@ -155,7 +155,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the y2 position of the segment.
 	 * 
-	 * @return The y2 coordinate of the segment.
+	  y2 coordinate of the segment.
 	 */
 	public float getY2()
 	{
@@ -163,7 +163,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	}
 
 	/**
-	 * @param scale
+
 	 *            The y2 to set.
 	 */
 	public void setY2(float y2)
@@ -184,7 +184,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the width of the segment.
 	 * 
-	 * @return The width of the segment.
+	  width of the segment.
 	 */
 	public float getWidth()
 	{
@@ -194,7 +194,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will get the height of the segment.
 	 * 
-	 * @return The height of the segment.
+	  height of the segment.
 	 */
 	public float getHeight()
 	{
@@ -204,7 +204,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * This will return the area of the segment.
 	 * 
-	 * @return The area of the segment (in pt^2).
+	  area of the segment (in pt^2).
 	 */
 	public float getArea()
 	{
@@ -224,7 +224,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	 * Merges this segment with the input segment.
 	 * Make sure to include everything you want your segments to share within the body of this or inherited methods.
 	 * 
-	 * @param seg A segment you want to merge with
+	  A segment you want to merge with
 	 */
 	public void mergeSegment(GenericSegment seg) {
 		
@@ -240,7 +240,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	/**
 	 * Getter method for attributes
 	 * 
-	 * @return returns a list of all attributes that this segments contains together with the segment type
+	  a list of all attributes that this segments contains together with the segment type
 	 */
 	public List<AttributeTuple> getAttributes() {
 		
@@ -437,7 +437,7 @@ public class GenericSegment implements Cloneable, IXmillumSegment, Serializable 
 	}
 
 	/**
-	 * @return Returns a clone of this segment, i.e.
+	  a clone of this segment, i.e.
 	 * the co-ordinates and level
 	 * TODO: implement for sub-objects
 	 */

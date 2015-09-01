@@ -30,11 +30,11 @@ public class XMLLayerLoader {
 	/**
 	 * Parses the xml file and creates style objects for each layer specified.
 	 * 
-	 * @return A Map mapping each layer name to the corresponding style object.
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws IOException
-	 * @throws IllegalArgumentException
+	  Map mapping each layer name to the corresponding style object.
+
+
+
+
 	 */
 	public static HashMap<String,Style> readXML( String xmlFilePath ) throws ParserConfigurationException, SAXException, IOException, IllegalArgumentException {
 		

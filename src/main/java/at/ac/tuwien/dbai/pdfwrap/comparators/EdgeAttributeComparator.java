@@ -56,8 +56,8 @@ public class EdgeAttributeComparator implements Comparator<AdjacencyEdge<? exten
      * same font size > differing font sizes
      * edges that contain non-text segments
      *
-     * @param ae1
-     * @param ae2
+     1
+     2
      *
      * @return
      */

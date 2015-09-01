@@ -16,8 +16,8 @@ public class MultiLineTooltip {
     /**
      * Splits a String in order to format a tool tip -> insert break line command
      * 
-     * @param tip The tool tip you want to format
-     * @return The formatted tool tip
+      The tool tip you want to format
+      formatted tool tip
      */
     public static String splitToolTip(String tip) {
     	
@@ -27,9 +27,9 @@ public class MultiLineTooltip {
     /**
      * Splits a String in order to format a tool tip -> insert break line command
      * 
-     * @param tip The tool tip you want to format
-     * @param length The length after that a new line break should be inserted
-     * @return The formatted tool tip
+      The tool tip you want to format
+      The length after that a new line break should be inserted
+      formatted tool tip
      */
     public static String splitToolTip(String tip,int length) {
     	

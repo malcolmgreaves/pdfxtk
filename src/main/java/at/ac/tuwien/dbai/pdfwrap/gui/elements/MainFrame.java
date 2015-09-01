@@ -59,8 +59,8 @@ public class MainFrame extends JFrame {
 	/**
 	 * Main method
 	 * 
-	 * @param args
-	 * @throws IllegalArgumentException 
+
+
 	 */
 	public static void main(String[] args) throws IllegalArgumentException, URISyntaxException {
         URL url = MainFrame.class.getClassLoader().getResource("guiConfig.xml");
@@ -78,7 +78,7 @@ public class MainFrame extends JFrame {
 	
 	/**
 	 * Constructor method for creating the main frame of the GUI
-     * @param configFile
+
 	 */
 	public MainFrame( String configFile ) {
 		
@@ -435,7 +435,7 @@ public class MainFrame extends JFrame {
 	/**
 	 * Determine the best frame size according to the current user screen size
 	 * 
-	 * @return best width and height for the GUI
+	  width and height for the GUI
 	 */
 	private Dimension getBestWindowSize() {
 		
@@ -462,8 +462,8 @@ public class MainFrame extends JFrame {
 		 * Constructor method for the PDF analysis thread based on SwingWorker.
 		 * Tries to only layout and print a PDF page, but uses previous analysis output.
 		 * 
-		 * @param f The PDF or XML file
-		 * @param pageNo The page number you want to show
+		  The PDF or XML file
+		  The page number you want to show
 		 */
 		public PDFAnalysisThread(File f, int pageNo) {
 			
@@ -478,7 +478,7 @@ public class MainFrame extends JFrame {
 		 * Constructor method for the PDF analysis thread based on SwingWorker.
 		 * Loads the PDF completely new and analyzes it.
 		 * 
-		 * @param f The PDF or XML file
+		  The PDF or XML file
 		 */
 		public PDFAnalysisThread(File f) {
 			

@@ -79,7 +79,7 @@ public class AdjacencyEdge<T extends GenericSegment> implements Serializable {
     /**
      * Constructor.
      *
-     * @param todo: add parameters :)
+     : add parameters :)
      *
      */
     
@@ -461,14 +461,14 @@ public class AdjacencyEdge<T extends GenericSegment> implements Serializable {
     }
     
     /**
-     * @return Returns the direction.
+      the direction.
      */
     public int getDirection() {
         return direction;
     }
     
     /**
-     * @param direction The direction to set.
+      The direction to set.
      */
     public void setDirection(int direction) {
         this.direction = direction;

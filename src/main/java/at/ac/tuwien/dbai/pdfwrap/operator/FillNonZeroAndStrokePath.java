@@ -51,10 +51,10 @@ public class FillNonZeroAndStrokePath extends org.apache.pdfbox.util.operator.Se
 
     /**
      * fill and stroke the path.
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      * 
-     * @throws IOException If an error occurs while processing the font.
+      If an error occurs while processing the font.
      */
     public void process(PDFOperator operator, List arguments) throws IOException
     {

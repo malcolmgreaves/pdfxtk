@@ -111,7 +111,7 @@ public class SelectionPanel extends JPanel {
 	 * Set the selected segments in order to be able to choose them from the combo box.
 	 * If segments are null then the selection panel will be cleared completely
 	 * 
-	 * @param segments The segments that were selected
+	  The segments that were selected
 	 */
 	public void setSelectedElements(ArrayList<StyledSegment> segments) {
 		
@@ -147,8 +147,8 @@ public class SelectionPanel extends JPanel {
 	/**
 	 * Returns for one segment a table model containing all its attributes.
 	 * 
-	 * @param segment the segment you wanted to display its attributes
-	 * @return a table model containing the attributes of the selected segment
+	  the segment you wanted to display its attributes
+	  table model containing the attributes of the selected segment
 	 */
 	private DefaultTableModel getAttributeText(StyledSegment segment) {
 		
@@ -174,7 +174,7 @@ public class SelectionPanel extends JPanel {
 	/**
 	 * Getter method for getting all the currently selected segments
 	 * 
-	 * @return Returns a list of the currently selected segments
+	  a list of the currently selected segments
 	 */
 	public ArrayList<StyledSegment> getSelectedSegments() {
 		

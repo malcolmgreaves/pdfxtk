@@ -21,7 +21,7 @@ public class UnknownShapeException extends IllegalArgumentException {
 	/**
 	 * Creates a {@link UnknownShapeException} and adds the specified String
 	 * 
-	 * @param s The shape of the name that is previously unknown
+	  The shape of the name that is previously unknown
 	 */
 	public UnknownShapeException(String s) {
 		

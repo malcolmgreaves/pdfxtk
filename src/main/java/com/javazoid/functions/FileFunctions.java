@@ -21,9 +21,9 @@ public class FileFunctions {
 	/**
 	 * Method readTextFile. Uses a FileReader to populate a buffer of chars. The chars are appended to a StringBuffer
 	 * and returned as a String to the caller. The FileReader uses the default file encoding scheme for the OS.
-	 * @param fullPathFilename
-	 * @return String
-	 * @throws IOException
+
+
+
 	 */
 	public static String readTextFile(String fullPathFilename) throws IOException {
 		StringBuffer sb = new StringBuffer(1024);
@@ -42,9 +42,9 @@ public class FileFunctions {
 	
 	/**
 	 * Method writeFile.
-	 * @param contents
-	 * @param fullPathFilename
-	 * @throws IOException
+
+
+
 	 */
 	 public static void writeTextFile(String contents, String fullPathFilename) throws IOException{
 	 	BufferedWriter writer = new BufferedWriter(new FileWriter(fullPathFilename));
@@ -81,8 +81,8 @@ public class FileFunctions {
 	/**
 	 * Method countWords. This supposes that a word is a space-delimited String. This would be trivial but for
 	 * the possibility of multiple spaces between words.
-	 * @param fullPathFilename
-	 * @return int
+
+
 	 */
 	 public static int countWords(String fullPathFilename) throws IOException{
 	 	

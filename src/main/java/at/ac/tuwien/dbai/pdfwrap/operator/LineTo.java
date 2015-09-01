@@ -53,8 +53,8 @@ public class LineTo extends OperatorProcessor
 
     /**
      * process : l : Append straight line segment to path.
-     * @param operator The operator that is being executed.
-     * @param arguments List
+      The operator that is being executed.
+      List
      */
     public void process(PDFOperator operator, List arguments) 
     {

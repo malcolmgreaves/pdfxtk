@@ -54,19 +54,19 @@ public class CompositeSegment<T extends GenericSegment> extends TextSegment
 	/**
 	 * Constructor.
 	 * 
-	 * @param x1
+	 1
 	 *            The x1 coordinate of the segment.
-	 * @param x2
+	 2
 	 *            The x2 coordinate of the segment.
-	 * @param y1
+	 1
 	 *            The y1 coordinate of the segment.
-	 * @param y2
+	 2
 	 *            The y2 coordinate of the segment.
-	 * @param text
+
 	 *            The textual contents of the segment.
-	 * @param font
+
 	 *            The (main) font of the segment.
-	 * @param fontSize
+
 	 *            The (main) font size in the segment.
 	 */
 	/* 30.11.06: these constructors appear to be useless*/
@@ -132,7 +132,7 @@ public class CompositeSegment<T extends GenericSegment> extends TextSegment
 
 
 	/**
-	 * @return Returns a clone of this segment, i.e.
+	  a clone of this segment, i.e.
 	 * the co-ordinates and other attributes and a
 	 * _shallowly cloned_ list sub-objects
 	 */

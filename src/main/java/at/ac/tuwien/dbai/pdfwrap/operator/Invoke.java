@@ -66,9 +66,9 @@ public class Invoke extends OperatorProcessor {
 
     /**
      * process : re : append rectangle to path.
-     * @param operator The operator that is being executed.
-     * @param arguments List
-     * @throws IOException If there is an error invoking the sub object.
+      The operator that is being executed.
+      List
+      If there is an error invoking the sub object.
      */
     public void process(PDFOperator operator, List arguments) throws IOException
     {

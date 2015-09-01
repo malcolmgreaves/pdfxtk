@@ -62,11 +62,11 @@ public class PDFPanel extends JPanel implements MouseListener, MouseMotionListen
 	/**
 	 * The constructor for the PDFPanel object.
 	 * 
-	 * @param dim The preferred size of this Panel
-	 * @param img The PDF as a BufferedImage
-	 * @param segList A list with all the elements of the PDF analysis process
-	 * @param attributePanel A panel for displaying the attributes of the selected segments
-	 * @param page The underlying page
+	  The preferred size of this Panel
+	  The PDF as a BufferedImage
+	  A list with all the elements of the PDF analysis process
+	  A panel for displaying the attributes of the selected segments
+	  The underlying page
 	 */
 	public PDFPanel(Dimension dim, BufferedImage img, List<StyledSegment> segList, SelectionPanel attributePanel, Page page) {
 		
@@ -146,7 +146,7 @@ public class PDFPanel extends JPanel implements MouseListener, MouseMotionListen
 	/**
 	 * Getter method for the underlying page
 	 * 
-	 * @return The underlying page object.
+	  underlying page object.
 	 */
 	public Page getPage() {
 		
@@ -156,7 +156,7 @@ public class PDFPanel extends JPanel implements MouseListener, MouseMotionListen
 	/**
 	 * Determines whether the background image is visible or not.
 	 * 
-	 * @param isPrintable true if the background image should be printed, false otherwise
+	  true if the background image should be printed, false otherwise
 	 */
 	public void setImgVisible(boolean isPrintable) {
 		
@@ -185,7 +185,7 @@ public class PDFPanel extends JPanel implements MouseListener, MouseMotionListen
 	/**
 	 * Fits everything according to either the current window width or the window height
 	 * 
-	 * @param fitWidth true if you want to fit the PDF to the window width, false otherwise (fit to window height)
+	  true if you want to fit the PDF to the window width, false otherwise (fit to window height)
 	 */
 	public void fitWindow(boolean fitWidth) {
 		

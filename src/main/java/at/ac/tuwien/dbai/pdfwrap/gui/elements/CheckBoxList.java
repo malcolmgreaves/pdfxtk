@@ -25,8 +25,8 @@ public class CheckBoxList extends JList<JCheckBox> {
 	/**
 	 * The constructor Method for creating a CheckBoxList
 	 * 
-	 * @param styleMap A map mapping the name of the layer to the corresponding Style information
-	 * @param attributePanel A panel for displaying the attributes of the selected segments
+	  A map mapping the name of the layer to the corresponding Style information
+	  A panel for displaying the attributes of the selected segments
 	 */
 	public CheckBoxList(final HashMap<String,Style> styleMap, final SelectionPanel attributePanel) {
 		

@@ -58,9 +58,9 @@ public class BeginInlineImage extends OperatorProcessor
 
     /**
      * process : BI : begin inline image.
-     * @param operator The operator that is being executed.
-     * @param arguments List
-     * @throws IOException If there is an error displaying the inline image.
+      The operator that is being executed.
+      List
+      If there is an error displaying the inline image.
      */
     public void process(PDFOperator operator, List arguments)  throws IOException
     {

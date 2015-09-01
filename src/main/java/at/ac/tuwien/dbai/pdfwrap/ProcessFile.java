@@ -323,17 +323,17 @@ public class ProcessFile
 
     /**
      *
-     * @param theFile as byte array
-     * @param pp bring in the pageProcessor implementation
-     * @param toXHTML whether to return xhtml document or XMIllum visualization format
-     * @param borders adds border to table cell in output format - works only when toXHTML true
-     * @param startPage The first page to start extraction(1 based)
-     * @param endPage The last page to extract(inclusive)
-     * @param encoding (ISO-8859-1,UTF-16BE,UTF-16LE,...)
-     * @param password Password to decrypt document
+      as byte array
+      bring in the pageProcessor implementation
+      whether to return xhtml document or XMIllum visualization format
+      adds border to table cell in output format - works only when toXHTML true
+      The first page to start extraction(1 based)
+      The last page to extract(inclusive)
+      (ISO-8859-1,UTF-16BE,UTF-16LE,...)
+      Password to decrypt document
      *
-     * @return new instance of dom document representing the processing results
-     * @throws DocumentProcessingException
+      instance of dom document representing the processing results
+
      */
     public static org.w3c.dom.Document processPDFToXMLDocument(byte[] theFile,
     	PageProcessor pp, boolean toXHTML, boolean borders,
@@ -379,9 +379,9 @@ public class ProcessFile
     /**
      * Infamous main method.
      *
-     * @param args Command line arguments, should be one and a reference to a file.
+      Command line arguments, should be one and a reference to a file.
      *
-     * @throws Exception If there is an error parsing the document.
+      If there is an error parsing the document.
      */
     public static void main(String[] args) throws Exception
     {

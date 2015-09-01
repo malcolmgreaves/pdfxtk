@@ -56,9 +56,9 @@ public class ShowTextGlyph extends OperatorProcessor
 {
     /**
      * TJ Show text, allowing individual glyph positioning.
-     * @param operator The operator that is being executed.
-     * @param arguments List
-     * @throws IOException If there is an error processing this operator.
+      The operator that is being executed.
+      List
+      If there is an error processing this operator.
      */
     public void process(PDFOperator operator, List arguments) throws IOException 
     {

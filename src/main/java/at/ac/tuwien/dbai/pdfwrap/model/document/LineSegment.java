@@ -57,10 +57,10 @@ public class LineSegment extends GenericSegment
 	/**
      * Constructor.
      *
-     * @param x1 The x1 coordinate of the segment.
-     * @param x2 The x2 coordinate of the segment.
-     * @param y1 The y1 coordinate of the segment.
-     * @param y2 The y2 coordinate of the segment.
+     1 The x1 coordinate of the segment.
+     2 The x2 coordinate of the segment.
+     1 The y1 coordinate of the segment.
+     2 The y2 coordinate of the segment.
      */
     public LineSegment(
         float x1,
@@ -105,7 +105,7 @@ public class LineSegment extends GenericSegment
     
 
     /**
-     * @return Returns the direction.
+      the direction.
      */
     public int getDirection() {
         return direction;
@@ -113,7 +113,7 @@ public class LineSegment extends GenericSegment
     
 
     /**
-     * @param direction The direction to set.
+      The direction to set.
      */
     public void setDirection(int direction) {
         this.direction = direction;
@@ -121,7 +121,7 @@ public class LineSegment extends GenericSegment
     
 
     /**
-     * @return Returns the l1.
+      the l1.
      */
     public float getL1() {
     	if (direction == DIR_HORIZ) // horizontal
@@ -140,7 +140,7 @@ public class LineSegment extends GenericSegment
     
 
     /**
-     * @return Returns the l2.
+      the l2.
      */
     public float getL2() {
     	if (direction == DIR_HORIZ) // horizontal
@@ -161,7 +161,7 @@ public class LineSegment extends GenericSegment
     
 
     /**
-     * @return Returns the t.
+      the t.
      */
     public float getT() {
     	if (direction == DIR_HORIZ) // horizontal

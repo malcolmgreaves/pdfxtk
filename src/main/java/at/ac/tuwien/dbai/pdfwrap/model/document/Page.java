@@ -133,7 +133,7 @@ public class Page extends CompositeSegment<GenericSegment> implements IXHTMLSegm
     }
     
     /**
-     * @return Returns the pageNo.
+      the pageNo.
      */
     public int getPageNo() {
         return pageNo;
@@ -141,7 +141,7 @@ public class Page extends CompositeSegment<GenericSegment> implements IXHTMLSegm
     
 
     /**
-     * @param pageNo The pageNo to set.
+      The pageNo to set.
      */
     public void setPageNo(int pageNo) {
         this.pageNo = pageNo;

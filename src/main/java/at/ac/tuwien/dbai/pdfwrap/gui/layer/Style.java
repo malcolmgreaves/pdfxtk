@@ -28,14 +28,14 @@ public class Style {
 	/**
 	 * The constructor for a Style object.
 	 * 
-	 * @param filled Specifies whether the associated shape should be filled or not
-	 * @param r Red value of the RGB color
-	 * @param g Green value of the RGB color 
-	 * @param b Blue value of the RGB color
-	 * @param alpha Alpha value of the RGB color
-	 * @param strokeWidth The width of the stroke that is used to draw the shape
-	 * @param shape Specifies which kind of shape is used.
-	 * @param source The specific class (name) that is associated with this style information. Meant are outputs of the PDF analysis
+	  Specifies whether the associated shape should be filled or not
+	  Red value of the RGB color
+	  Green value of the RGB color
+	  Blue value of the RGB color
+	  Alpha value of the RGB color
+	  The width of the stroke that is used to draw the shape
+	  Specifies which kind of shape is used.
+	  The specific class (name) that is associated with this style information. Meant are outputs of the PDF analysis
 	 * process, e.g. {@link TextBlock}.
 	 */
 	public Style(boolean filled, int r, int g, int b, int alpha, int strokeWidth, Shapes shape, String source) {
@@ -53,7 +53,7 @@ public class Style {
 	/**
 	 * Checks whether the shape is filled or not.
 	 * 
-	 * @return True if the shape is filled, false otherwise
+	  if the shape is filled, false otherwise
 	 */
 	public boolean isfilled() {
 		
@@ -63,7 +63,7 @@ public class Style {
 	/**
 	 * Get the color information.
 	 * 
-	 * @return The color of the current style object
+	  color of the current style object
 	 */
 	public Color getColor() {
 		
@@ -73,7 +73,7 @@ public class Style {
 	/**
 	 * Get the stroke width of the shape
 	 * 
-	 * @return The stroke width of the current shape
+	  stroke width of the current shape
 	 */
 	public int getStrokeWidth() {
 		
@@ -83,7 +83,7 @@ public class Style {
 	/**
 	 * Get the name of the shape, e.g. rectangle.
 	 * 
-	 * @return The name of the shape.
+	  name of the shape.
 	 */
 	public Shapes getShape() {
 		
@@ -93,7 +93,7 @@ public class Style {
 	/**
 	 * Get the name of the associated class. That is one of the {@link GenericSegment} objects.
 	 * 
-	 * @return The name of a class
+	  name of a class
 	 */
 	public String getSource() {
 		
@@ -103,7 +103,7 @@ public class Style {
 	/**
 	 * Checks whether the objects associated with this style information should be printed or not.
 	 * 
-	 * @return True if printing is desired, false otherwise
+	  if printing is desired, false otherwise
 	 */
 	public boolean isPrintable() {
 		
@@ -113,7 +113,7 @@ public class Style {
 	/**
 	 * Sets the printing behavior.
 	 * 
-	 * @param isPrinted True if the objects associated with this class should be printed, false otherwise.
+	  True if the objects associated with this class should be printed, false otherwise.
 	 */
 	public void setPrintable(boolean isPrinted) {
 		

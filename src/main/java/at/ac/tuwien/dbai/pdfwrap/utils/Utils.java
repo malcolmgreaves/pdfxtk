@@ -450,8 +450,8 @@ public class Utils
      * standard. This method will return an empty String if the input is null or empty.
      *
      * @author Donoiu Cristian, GPL
-     * @param  The String whose non-valid characters we want to remove.
-     * @return The in String, stripped of non-valid characters.
+      The String whose non-valid characters we want to remove.
+      in String, stripped of non-valid characters.
      */
     public static String removeInvalidXMLCharacters(String s) {
         StringBuilder out = new StringBuilder();                // Used to hold the output.

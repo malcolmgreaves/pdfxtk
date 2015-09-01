@@ -68,13 +68,13 @@ public class TextSegment extends GenericSegment
     /**
      * Constructor.
      *
-     * @param x1 The x1 coordinate of the segment.
-     * @param x2 The x2 coordinate of the segment.
-     * @param y1 The y1 coordinate of the segment.
-     * @param y2 The y2 coordinate of the segment.
-     * @param text The textual contents of the segment.
-     * @param font The (main) font of the segment.
-     * @param fontSize The (main) font size in the segment.
+     1 The x1 coordinate of the segment.
+     2 The x2 coordinate of the segment.
+     1 The y1 coordinate of the segment.
+     2 The y2 coordinate of the segment.
+      The textual contents of the segment.
+      The (main) font of the segment.
+      The (main) font size in the segment.
      */
     public TextSegment(
         float x1,
@@ -114,7 +114,7 @@ public class TextSegment extends GenericSegment
 	/**
      * This will get the text of the segment.
      *
-     * @return The text.
+      text.
      */
     public String getText()
     {
@@ -122,7 +122,7 @@ public class TextSegment extends GenericSegment
     }
     
     /**
-     * @param scale The text to set.
+      The text to set.
      */
     public void setText(String text)
     {
@@ -132,7 +132,7 @@ public class TextSegment extends GenericSegment
     /**
      * This will get the font size of the segment.
      *
-     * @return The font size of the segment.
+      font size of the segment.
      */
     public float getFontSize()
     {
@@ -140,7 +140,7 @@ public class TextSegment extends GenericSegment
     }
     
     /**
-     * @param scale The font size to set.
+      The font size to set.
      */
     public void setFontSize(float fontSize)
     {
@@ -151,7 +151,7 @@ public class TextSegment extends GenericSegment
      * This will return whether the text segment is 'empty', i.e.
 	 * contains just an empty string or a string with only spaces
      *
-     * @return TRUE if empty
+      if empty
      */
     public boolean isEmpty()
     {

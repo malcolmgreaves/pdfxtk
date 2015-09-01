@@ -52,7 +52,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Getter method for the left previous arrow button
 	 * 
-	 * @return The left previous arrow button
+	  left previous arrow button
 	 */
 	public BasicArrowButton getPreviousButton() {
 		
@@ -62,7 +62,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Getter method for the right next arrow button
 	 * 
-	 * @return The right next arrow button
+	  right next arrow button
 	 */
 	public BasicArrowButton getNextButton() {
 		
@@ -72,7 +72,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Increases the spinner value by one but takes care of the maximum page number
 	 * 
-	 * @return true if the increasing operation was successful, false otherwise
+	  if the increasing operation was successful, false otherwise
 	 */
 	public boolean increase() {
 		
@@ -90,7 +90,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Decreases the spinner value by one but takes care not to fall below a value of one
 	 * 
-	 * @return true if the decreasing operation was successful, false otherwise
+	  if the decreasing operation was successful, false otherwise
 	 */
 	public boolean decrease() {
 		
@@ -108,7 +108,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Getter method for the current visible page number
 	 * 
-	 * @return the number of the currently displayed page
+	  number of the currently displayed page
 	 */
 	public int getCurrentPage() {
 		
@@ -118,7 +118,7 @@ public class PageSpinner extends JPanel {
 	/**
 	 * Method for initializing a new spinner value starting at page one of max pages
 	 * 
-	 * @param max the maximum number of pages
+	  the maximum number of pages
 	 */
 	public void initNewSpinnerValues(int max) {
 		

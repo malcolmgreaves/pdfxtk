@@ -165,7 +165,7 @@ public class PDFObjectExtractor extends PDFStreamEngine
     /**
      * Default constructor, loads properties from file.
      * 
-     * @throws IOException If there is an error loading properties from the file.
+      If there is an error loading properties from the file.
      */
     public PDFObjectExtractor() throws IOException
     {
@@ -179,11 +179,11 @@ public class PDFObjectExtractor extends PDFStreamEngine
     /**
      * This will draw the page to the requested context.
      *
-     * @param g The graphics context to draw onto.
-     * @param p The page to draw.
-     * @param pageDimension The size of the page to draw.
+      The graphics context to draw onto.
+      The page to draw.
+      The size of the page to draw.
      *
-     * @throws IOException If there is an IO error while drawing the page.
+      If there is an IO error while drawing the page.
      */
     public void drawPage( Graphics g, PDPage p, Dimension pageDimension ) throws IOException
     {
@@ -263,9 +263,9 @@ public class PDFObjectExtractor extends PDFStreamEngine
      * You should override this method if you want to perform an action when a
      * string is being shown.
      *
-     * @param string The string to display.
+      The string to display.
      *
-     * @throws IOException If there is an error showing the string
+      If there is an error showing the string
      */
     public void showString( byte[] string , int argIndex) throws IOException
     {
@@ -849,7 +849,7 @@ end commented out 1.1 */
      * You should override this method if you want to perform an action when a
      * string is being shown.
      *
-     * @param text The string to display.
+      The string to display.
      */
 /* start commented out 1.1
     protected void showCharacter( TextPosition text )
@@ -901,7 +901,7 @@ end commented out 1.1 */
     /**
      * Get the graphics that we are currently drawing on.
      * 
-     * @return The graphics we are drawing on.
+      graphics we are drawing on.
      */
     public Graphics2D getGraphics()
     {
@@ -911,7 +911,7 @@ end commented out 1.1 */
     /**
      * Get the page that is currently being drawn.
      * 
-     * @return The page that is being drawn.
+      page that is being drawn.
      */
     public PDPage getPage()
     {
@@ -921,7 +921,7 @@ end commented out 1.1 */
     /**
      * Get the size of the page that is currently being drawn.
      * 
-     * @return The size of the page that is being drawn.
+      size of the page that is being drawn.
      */
     public Dimension getPageSize()
     {
@@ -931,9 +931,9 @@ end commented out 1.1 */
     /**
      * Fix the y coordinate based on page rotation.
      * 
-     * @param x The x coordinate.
-     * @param y The y coordinate.
-     * @return The updated y coordinate.
+      The x coordinate.
+      The y coordinate.
+      updated y coordinate.
      */
     public double fixY( double x, double y )
     {
@@ -943,7 +943,7 @@ end commented out 1.1 */
     /**
      * Get the current line path to be drawn.
      * 
-     * @return The current line path to be drawn.
+      current line path to be drawn.
      */
     public GeneralPath getLinePath()
     {
@@ -953,7 +953,7 @@ end commented out 1.1 */
     /**
      * Set the line path to draw.
      * 
-     * @param newLinePath Set the line path to draw.
+      Set the line path to draw.
      */
     public void setLinePath(GeneralPath newLinePath)
     {
@@ -967,7 +967,7 @@ end commented out 1.1 */
     /**
      * Get the current list of line paths to be drawn.
      * 
-     * @return The current list of line paths to be drawn.
+      current list of line paths to be drawn.
      */
     public List getLineSubPaths()
     {
@@ -977,7 +977,7 @@ end commented out 1.1 */
     /**
      * Set the list of line paths to draw.
      * 
-     * @param newLineSubPaths Set the list of line paths to draw.
+      Set the list of line paths to draw.
      */
     public void setLineSubPaths(List newLineSubPaths)
     {
@@ -988,7 +988,7 @@ end commented out 1.1 */
      *
      * Fill the path
      * 
-     * @param windingRule The winding rule this path will use.
+      The winding rule this path will use.
      */
     public void fillPath(int windingRule) throws IOException{
     	
@@ -1054,7 +1054,7 @@ end commented out 1.1 */
     /**
      * Get the non stroking color.
      * 
-     * @return The non stroking color.
+      non stroking color.
      */
     public Color getNonStrokingColor()
     {
@@ -1064,7 +1064,7 @@ end commented out 1.1 */
     /**
      * Set the non stroking color.
      * 
-     * @param newNonStrokingColor The non stroking color.
+      The non stroking color.
      */
     public void setNonStrokingColor(Color newNonStrokingColor)
     {
@@ -1075,7 +1075,7 @@ end commented out 1.1 */
     /**
      * Get the stroking color.
      * 
-     * @return The stroking color.
+      stroking color.
      */
     public Color getStrokingColor()
     {
@@ -1085,7 +1085,7 @@ end commented out 1.1 */
     /**
      * Set the stroking color.
      * 
-     * @param newStrokingColor The stroking color.
+      The stroking color.
      */
     public void setStrokingColor(Color newStrokingColor)
     {
@@ -1172,9 +1172,9 @@ end commented out 1.1 */
      * Start a new page.  Default implementation is to do nothing.  Subclasses
      * may provide additional information.
      * 
-     * @param page The page we are about to process.
+      The page we are about to process.
      * 
-     * @throws IOException If there is any error writing to the stream.
+      If there is any error writing to the stream.
      */
     protected void startPage( PDPage page ) throws IOException
     {
@@ -1185,9 +1185,9 @@ end commented out 1.1 */
      * End a page.  Default implementation is to do nothing.  Subclasses
      * may provide additional information.
      * 
-     * @param page The page we are about to process.
+      The page we are about to process.
      * 
-     * @throws IOException If there is any error writing to the stream.
+      If there is any error writing to the stream.
      */
     protected void endPage( PDPage page ) throws IOException
     {
@@ -1197,7 +1197,7 @@ end commented out 1.1 */
     /**
      * This will set the first page to be extracted by this class.
      *
-     * @param startPageValue New value of property startPage.
+      New value of property startPage.
      */
     public void setStartPage(int startPageValue)
     {
@@ -1207,7 +1207,7 @@ end commented out 1.1 */
     /**
      * This will set the last page to be extracted by this class.
      *
-     * @param endPageValue New value of property endPage.
+      New value of property endPage.
      */
     public void setEndPage(int endPageValue)
     {
@@ -1220,7 +1220,7 @@ end commented out 1.1 */
      * then all pages will be extracted.  If the start page is 4 then pages 4 and 5
      * will be extracted.  The default value is 1.
      *
-     * @return Value of property startPage.
+      of property startPage.
      */
     public int getStartPage()
     {
@@ -1233,7 +1233,7 @@ end commented out 1.1 */
      * entire document, an end page of 2 would extract pages 1 and 2.  This defaults
      * to Integer.MAX_VALUE such that all pages of the pdf will be extracted.
      *
-     * @return Value of property endPage.
+      of property endPage.
      */
     public int getEndPage()
     {
@@ -1315,10 +1315,10 @@ end commented out 1.1 */
     /**
      * This will take a PDDocument and return a list of PDFPage objects for each page
      *
-     * @param doc The document to get the data from.
-     * @param outputStream The location to put the text.
+      The document to get the data from.
+      The location to put the text.
      *
-     * @throws IOException If the doc is in an invalid state.
+      If the doc is in an invalid state.
      */
     public List<PDFPage> findObjects(PDDocument doc) throws IOException
     {
@@ -1395,9 +1395,9 @@ end commented out 1.1 */
     /**
      * This will process all of the pages and the text that is in them.
      *
-     * @param pages The pages object in the document.
+      The pages object in the document.
      *
-     * @throws IOException If there is an error parsing the text.
+      If there is an error parsing the text.
      */
     protected List<PDFPage> processPages( List pages ) throws IOException
     {
@@ -1568,10 +1568,10 @@ end commented out 1.1 */
      * This will process the contents of a page.
 	 * modified by TH
      *
-     * @param page The page to process.
-     * @param content The contents of the page.
+      The page to process.
+      The contents of the page.
      *
-     * @throws IOException If there is an error processing the page.
+      If there is an error processing the page.
      */
     protected PDFPage processPage( PDPage page, COSStream content ) throws IOException
     {
@@ -1980,11 +1980,11 @@ end commented out 1.1 */
     /**
      * TODO: extract byte[] from img and add it to ImageSegment
      *
-     * @param x1
-     * @param x2
-     * @param y1
-     * @param y2
-     * @param img
+     1
+     2
+     1
+     2
+
      */
 	public void simpleDrawImage(float x1, float x2, float y1, float y2, PDXObjectImage img ) {
 		ImageSegment newImageSegment = new ImageSegment(x1, x2, y1, y2);

@@ -2,7 +2,7 @@
 # matches "bin" in any subfolder
 bin/
 
-
+.idea*
 *.swp
 LOG*
 

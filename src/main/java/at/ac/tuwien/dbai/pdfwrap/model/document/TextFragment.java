@@ -66,13 +66,13 @@ public class TextFragment extends CompositeSegment<CharSegment>
     /**
      * Constructor.
      *
-     * @param x1 The x1 coordinate of the segment.
-     * @param x2 The x2 coordinate of the segment.
-     * @param y1 The y1 coordinate of the segment.
-     * @param y2 The y2 coordinate of the segment.
-     * @param text The textual contents of the segment.
-     * @param font The (main) font of the segment.
-     * @param fontSize The (main) font size in the segment.
+     1 The x1 coordinate of the segment.
+     2 The x2 coordinate of the segment.
+     1 The y1 coordinate of the segment.
+     2 The y2 coordinate of the segment.
+      The textual contents of the segment.
+      The (main) font of the segment.
+      The (main) font size in the segment.
      */
     public TextFragment(
         float x1,
@@ -146,9 +146,9 @@ public class TextFragment extends CompositeSegment<CharSegment>
      * As of PDFBox 0.7.2, this is the method currently in use, which
 	 * converts co-ordinates back to the original system.
 	 *
-     * @param tPos - the TextPosition object; pageDim - page dimensions in order to
+      - the TextPosition object; pageDim - page dimensions in order to
 	 * convert co-ordinates
-	 * @return The new TextFragment object
+	  new TextFragment object
      */
     public TextFragment(TextPosition tPos, GenericSegment pageDim)
     {

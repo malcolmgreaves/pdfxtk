@@ -51,9 +51,9 @@ public class SetNonStrokingRGBColor extends org.apache.pdfbox.util.operator.SetN
 {
     /**
      * rg Set color space for non stroking operations.
-     * @param operator The operator that is being executed.
-     * @param arguments List
-     * @throws IOException If an error occurs while processing the font.
+      The operator that is being executed.
+      List
+      If an error occurs while processing the font.
      */
     public void process(PDFOperator operator, List arguments) throws IOException
     {

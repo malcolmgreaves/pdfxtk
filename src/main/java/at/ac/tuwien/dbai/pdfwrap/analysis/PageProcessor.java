@@ -170,10 +170,10 @@ public class PageProcessor {
      * This will process the contents of a page.
      * modified by TH
      *
-     * @param page The page to process.
-     * @param content The contents of the page.
+      The page to process.
+      The contents of the page.
      *
-     * @throws IOException If there is an error processing the page.
+      If there is an error processing the page.
      */
     public Page processPage(PDFPage thisPage) // throws IOException
     {
