@@ -56,6 +56,7 @@ libraryDependencies ++= Seq(
   , "xerces" % "xerces" % "2.4.0"
   // testing
   , "junit" % "junit" % "4.11" % Test
+  , "com.novocode" % "junit-interface" % "0.11" % Test
 )
 
 // publishing settings
@@ -70,3 +71,5 @@ Publish.settings(
   lic = License.apache20
 )
 
+// test settings
+testOptions += Tests.Argument(TestFrameworks.JUnit, "-v")
