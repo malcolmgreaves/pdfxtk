@@ -30,6 +30,8 @@ lazy val devConfig = {
 
 CompileScalaJava.librarySettings(devConfig)
 
+javacOptions := Seq.empty[String]
+
 javaOptions := JvmRuntime.settings(devConfig.jvmVer)
 
 // dependencies and their resolvers
@@ -52,7 +54,8 @@ libraryDependencies ++= Seq(
   //, "javax.media.jai" % "com.springsource.javax.media.jai.codec" % "1.1.3"
   , "com.github.jai-imageio" % "jai-imageio-core" % "1.3.0"
   , "xerces" % "xerces" % "2.4.0"
-  , "junit" % "junit" % "4.11"
+  // testing
+  , "junit" % "junit" % "4.11" % Test
 )
 
 // publishing settings

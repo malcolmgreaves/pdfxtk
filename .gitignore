@@ -2,6 +2,11 @@
 # matches "bin" in any subfolder
 bin/
 
+
+*.swp
+LOG*
+
+
 # ignore all target directories
 target/
 
