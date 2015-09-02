@@ -55,7 +55,7 @@ Publish.settings(
   repo = Repository.github("malcolmgreaves", name.toString),
   developers =
     Seq(
-      Dev("Tamir", "Hassan")
+      Developer("tamirhassan", "Tamir Hassan", "dev@tamirhassan.com", new URL("http", "github.com", "/tamirhassan") )
     ),
   art = ArtifactInfo.sonatype(semver),
   lic = License.apache20
