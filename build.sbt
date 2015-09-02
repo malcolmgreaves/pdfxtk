@@ -10,29 +10,19 @@ organization := "io.malcolmgreaves"
 
 name := "pdfXtk"
 
-lazy val semver = SemanticVersion(0, 9, 0, isSnapshot = false)
+lazy val semver = SemanticVersion(0, 9, 0, isSnapshot = true)
 
 version := semver.toString
 
-// scala & java
+scalaVersion := "2.11.7"
 
-//                         :::   NOTE   :::
-// we want to update to JVM 8 ASAP !
-// since we know that we want to be able to use this stuff w/ Spark,
-// we unfortunately have to limit ourselves to jvm 7.
-// once this gets resolved, we'll update: 
-// [JIRA Issue]     https://issues.apache.org/jira/browse/SPARK-6152
+crossScalaVersions := Seq("2.11.7", "2.10.5")
 
-lazy val devConfig = {
-  import CompileScalaJava._
-  Config.spark
-}
+lazy val javaVersion = "1.7"
 
-CompileScalaJava.librarySettings(devConfig)
+javacOptions in (Compile, compile) ++= Seq("-source", javaVersion, "-target", javaVersion) 
 
-javacOptions := Seq.empty[String]
-
-javaOptions := JvmRuntime.settings(devConfig.jvmVer)
+javacOptions in (doc) ++= Seq("-source", javaVersion) 
 
 // dependencies and their resolvers
 
