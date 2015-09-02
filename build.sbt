@@ -10,7 +10,7 @@ organization := "io.malcolmgreaves"
 
 name := "pdfXtk"
 
-lazy val semver = SemanticVersion(0, 9, 0, isSnapshot = true)
+lazy val semver = SemanticVersion(0, 9, 0, isSnapshot = false)
 
 version := semver.toString
 
