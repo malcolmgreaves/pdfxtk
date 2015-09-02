@@ -34,9 +34,6 @@ package at.ac.tuwien.dbai.pdfwrap.utils;
 import at.ac.tuwien.dbai.pdfwrap.model.document.TextSegment;
 import at.ac.tuwien.dbai.pdfwrap.model.graph.AdjacencyEdge;
 
-import javax.media.jai.Histogram;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.renderable.ParameterBlock;
@@ -475,34 +472,6 @@ public class Utils
     	return out.toString();
     } 
     
-    // http://java.itags.org/java-tech/36144/
-    // 12.11.10 DOES NOT WORK!
-    public static BufferedImage convertToBinary(BufferedImage sourceImg){
-
-    	double[][] matrix = {{ 0.3D, 0.59D, 0.11D, 0D }};
-
-    	ParameterBlock pb = new ParameterBlock();
-
-    	pb.addSource(sourceImg);
-
-    	pb.add(matrix);
-
-    	PlanarImage src = JAI.create("BandCombine", pb, null);
-
-    	// Generate a histogram.
-
-    	Histogram histogram = (Histogram)JAI.create("histogram", src).getProperty("histogram");
-
-    	// Get a threshold equal to the median.
-
-    	double[] threshold = histogram.getPTileThreshold(0.5);
-
-    	// Binarize the image.
-
-    	PlanarImage dst = JAI.create("binarize", src, new Double(threshold[0]));
-
-    	return dst.getAsBufferedImage(); 
-    }
     
     public static int oppositeDirection(int direction)
 	{
