@@ -6,13 +6,17 @@ import PublishHelpers._
 
 // GAV
 
-organization := "io.malcolmgreaves"
-
-name := "pdfXtk"
+lazy val pName = "pdfXtk"
 
 lazy val semver = SemanticVersion(0, 9, 0, isSnapshot = false)
 
+organization := "io.malcolmgreaves"
+
+name := pName
+
 version := semver.toString
+
+// compile & runtime
 
 scalaVersion := "2.11.7"
 
@@ -52,7 +56,7 @@ libraryDependencies ++= Seq(
 // publishing settings
 
 Publish.settings(
-  repo = Repository.github("malcolmgreaves", name.toString),
+  repo = Repository.github("malcolmgreaves", pName),
   developers =
     Seq(
       Developer("tamirhassan", "Tamir Hassan", "dev@tamirhassan.com", new URL("http", "github.com", "/tamirhassan") )
