@@ -4,7 +4,7 @@
     <groupId>com.tamirhassan</groupId>
 
     <packaging>pom</packaging>
-    <artifactId>pdfXtk-parent</artifactId>
+    <artifactId>pdfXtk</artifactId>
     <version>0.9-SNAPSHOT</version>
 
     <issueManagement>
@@ -33,7 +33,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <parent-path>${basedir}</parent-path>
     </properties>
 
 
@@ -47,11 +46,6 @@
 
         </profile>
     </profiles>
-
-    <modules>
-        <module>pdfXtk</module>
-    </modules>
-
 
     <dependencies>
 
