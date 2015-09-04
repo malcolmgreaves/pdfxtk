@@ -1435,19 +1435,19 @@ end commented out 1.1 */
             
             try 
             {
-            	System.out.println("Current page no: " + currentPageNo);
+//            	System.out.println("Current page no: " + currentPageNo);
             
-	            if (page.getArtBox() != null)
-	            	System.out.println("Art Box: " + new GenericSegment(page.getArtBox()));
-	            if (page.getBleedBox() != null)
-	           		System.out.println("Bleed Box: " + new GenericSegment(page.getBleedBox()));
-	            // the following value caused problems for pp120-hassan.pdf
-	            if (page.getCropBox() != null)
-	            	System.out.println("Crop Box: " + new GenericSegment(page.getCropBox()));
-	            if (page.getMediaBox() != null)
-	            	System.out.println("Media Box: " + new GenericSegment(page.getMediaBox()));
-	            if (page.getTrimBox() != null)
-	            	System.out.println("Trim Box: " + new GenericSegment(page.getTrimBox()));
+//	            if (page.getArtBox() != null)
+//	            	System.out.println("Art Box: " + new GenericSegment(page.getArtBox()));
+//	            if (page.getBleedBox() != null)
+//	           		System.out.println("Bleed Box: " + new GenericSegment(page.getBleedBox()));
+//	            // the following value caused problems for pp120-hassan.pdf
+//	            if (page.getCropBox() != null)
+//	            	System.out.println("Crop Box: " + new GenericSegment(page.getCropBox()));
+//	            if (page.getMediaBox() != null)
+//	            	System.out.println("Media Box: " + new GenericSegment(page.getMediaBox()));
+//	            if (page.getTrimBox() != null)
+//	            	System.out.println("Trim Box: " + new GenericSegment(page.getTrimBox()));
 	            
 	            // if media box is null (not allowed!) find a substitute
 	            
@@ -1470,7 +1470,7 @@ end commented out 1.1 */
             	npe.printStackTrace();
             }
             int pageRotation = page.findRotation();
-            System.out.println("Page rotation: " + pageRotation);
+//            System.out.println("Page rotation: " + pageRotation);
             // end of addition
             PDStream contentStream = nextPage.getContents();
             
