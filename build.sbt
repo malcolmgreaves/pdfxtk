@@ -8,7 +8,7 @@ import PublishHelpers._
 
 lazy val pName = "pdfXtk"
 
-lazy val semver = SemanticVersion(0, 10, 1, isSnapshot = false)
+lazy val semver = SemanticVersion(0, 10, 2, isSnapshot = false)
 
 organization := "io.malcolmgreaves"
 
