@@ -1,2 +1,2 @@
-addSbtPlugin("com.gonitro" % "sbt-dev-settings" % "0.2.0")
+addSbtPlugin("com.gonitro" % "sbt-dev-settings" % "0.4.0")
 

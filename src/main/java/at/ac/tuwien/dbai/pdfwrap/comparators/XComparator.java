@@ -46,12 +46,18 @@ public class XComparator implements Comparator<GenericSegment>
 			// sorts in x order
 			double x1 = obj1.getX1();
 			double x2 = obj2.getX1();
-
-			return (int) (x1 - x2);
+			if (x1-x2>0.0)
+				return 1;
+			else if (x1-x2<0.0)
+				return -1;
+			else
+				return 0;
+			//return (int) (x1 - x2); THIS WAS THE ORIGINAL CODE: SAGNIK
 		}
 
 		public boolean equals(Object obj)
 		{
 			return obj.equals(this);
 		}
+
 	}

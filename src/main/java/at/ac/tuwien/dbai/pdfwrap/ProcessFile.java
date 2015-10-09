@@ -36,6 +36,7 @@ import at.ac.tuwien.dbai.pdfwrap.exceptions.DocumentProcessingException;
 import at.ac.tuwien.dbai.pdfwrap.model.document.GenericSegment;
 import at.ac.tuwien.dbai.pdfwrap.model.document.IXHTMLSegment;
 import at.ac.tuwien.dbai.pdfwrap.model.document.Page;
+import at.ac.tuwien.dbai.pdfwrap.model.document.TextBlock;
 import at.ac.tuwien.dbai.pdfwrap.model.graph.AdjacencyGraph;
 import at.ac.tuwien.dbai.pdfwrap.pdfread.PDFObjectExtractor;
 import at.ac.tuwien.dbai.pdfwrap.pdfread.PDFPage;
@@ -44,6 +45,8 @@ import org.apache.log4j.Logger;
 import org.apache.pdfbox.exceptions.CryptographyException;
 import org.apache.pdfbox.exceptions.InvalidPasswordException;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
+import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.xml.serialize.OutputFormat;
 import org.apache.xml.serialize.XMLSerializer;
 import org.w3c.dom.DOMImplementation;
@@ -108,6 +111,83 @@ public class ProcessFile
     public static final String PROCESS_SPACES = "-spaces";
     public static final String NORULINGLINES = "-norulinglines";
 
+    @SuppressWarnings("static-access")
+    public static List<Page> processPDF(String inFile, byte[] theFile, PageProcessor pp,
+                                        int startPage, int endPage, String encoding, String password,
+                                        List<AdjacencyGraph<GenericSegment>> adjGraphList, boolean GUI)
+            throws DocumentProcessingException
+    {
+        if (password == null)
+            password = "";
+        if (encoding == null || encoding == "")
+            encoding = DEFAULT_ENCODING;
+
+        if (startPage == 0)
+            startPage = 1;
+        if (endPage == 0)
+            endPage = Integer.MAX_VALUE;
+
+        ByteArrayInputStream inStream = new ByteArrayInputStream(theFile);
+        PDDocument document = null;
+
+        try {
+
+            PDFObjectExtractor extractor = new PDFObjectExtractor();
+            document = PDDocument.load( inStream );
+            if( document.isEncrypted() ) {
+                try {
+                    document.decrypt( password );
+                } catch( InvalidPasswordException e ) {
+                    if(!(password == null || password == "")){//they supplied the wrong password
+                        throw new DocumentProcessingException
+                                ("Error: The supplied password is incorrect.");
+                    }
+                    else {
+                        //they didn't suppply a password and the default of "" was wrong.
+                        throw new DocumentProcessingException
+                                ( "Error: The document is encrypted." );
+                    }
+                } catch (CryptographyException e) {
+                    throw new DocumentProcessingException(e);
+                }
+            }
+
+            extractor.setStartPage( startPage );
+            extractor.setEndPage( endPage );
+            List<PDFPage> thePages =null;
+            try{
+                thePages = extractor.findObjects(document);
+            }catch(Exception E){
+                return null;
+            }
+            List<Page> theResult = new ArrayList<Page>();
+
+            Iterator<PDFPage> pageIter = thePages.iterator();
+            TextBlock t=null;
+            while(pageIter.hasNext())
+            {
+                PDFPage thePage = pageIter.next();
+                Page resultPage = pp.processPage(thePage);
+                theResult.add(resultPage);
+            }
+
+            if (!GUI)
+                theResult = pp.processDocPages(theResult, null);
+
+            // move to finally block somewhere?
+            if( document != null )
+            {
+                document.close();
+            }
+            return theResult;
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            throw new DocumentProcessingException(e);
+        }
+
+    }
     /*
     public static String STR_INFILE = "";
     public static String STR_OUTPUT_PATH = ".";
@@ -323,25 +403,25 @@ public class ProcessFile
 
     /**
      *
-      as byte array
-      bring in the pageProcessor implementation
-      whether to return xhtml document or XMIllum visualization format
-      adds border to table cell in output format - works only when toXHTML true
-      The first page to start extraction(1 based)
-      The last page to extract(inclusive)
-      (ISO-8859-1,UTF-16BE,UTF-16LE,...)
-      Password to decrypt document
+     * @param theFile as byte array
+     * @param pp bring in the pageProcessor implementation
+     * @param toXHTML whether to return xhtml document or XMIllum visualization format
+     * @param borders adds border to table cell in output format - works only when toXHTML true
+     * @param startPage The first page to start extraction(1 based)
+     * @param endPage The last page to extract(inclusive)
+     * @param encoding (ISO-8859-1,UTF-16BE,UTF-16LE,...)
+     * @param password Password to decrypt document
      *
-      instance of dom document representing the processing results
-
+     * @return new instance of dom document representing the processing results
+     * @throws DocumentProcessingException
      */
     public static org.w3c.dom.Document processPDFToXMLDocument(byte[] theFile,
     	PageProcessor pp, boolean toXHTML, boolean borders,
     	int startPage, int endPage, String encoding, String password)
     	throws DocumentProcessingException
     {
-    	List<Page> theResult = processPDF(theFile, pp, startPage, endPage, 
-    		encoding, password, null, false);
+    	List<Page> theResult = processPDF(theFile, pp, startPage, endPage,
+                encoding, password, null, false);
     	
     	return processResultToXMLDocument(theResult, toXHTML, borders);
     }
@@ -375,13 +455,34 @@ public class ProcessFile
         
         return serializeXML(resultDocument);
     }
-    
+
+    public static List<Page> getPageObjects(String inFile) throws Exception {
+        boolean toConsole = false;
+        boolean toXHTML = true;
+        boolean borders = true;
+        boolean rulingLines = true;
+        boolean processSpaces = false;
+        boolean currentArgumentIndex = false;
+        String password = "";
+        String encoding = "UTF-8";
+        new PDFObjectExtractor();
+        byte startPage = 1;
+        int endPage = Integer.MAX_VALUE;
+        File inputFile = new File(inFile);
+        byte[] inputDoc = getBytesFromFile(inputFile);
+        PageProcessor pp = new PageProcessor();
+        pp.setProcessType(5);
+        pp.setRulingLines(rulingLines);
+        pp.setProcessSpaces(processSpaces);
+        List pages = processPDF(inFile, inputDoc, pp, startPage, endPage, encoding, password, (List)null, false);
+        return pages;
+    }
     /**
      * Infamous main method.
      *
-      Command line arguments, should be one and a reference to a file.
+     * @param args Command line arguments, should be one and a reference to a file.
      *
-      If there is an error parsing the document.
+     * @throws Exception If there is an error parsing the document.
      */
     public static void main(String[] args) throws Exception
     {
@@ -442,17 +543,7 @@ public class ProcessFile
             {
                 toConsole = true;
             }
-            /*
-            else if( args[i].equals( AUTOTABLE ))
-            {
-                autotable = true;
-            }
-            else if( args[i].equals( TABLE ))
-            {
-                table = true;
-            }
-            */
-            else if( args[i].equals( NOBORDERS ))
+              else if( args[i].equals( NOBORDERS ))
             {
             	borders = false;
             }
@@ -736,4 +827,3 @@ final class XML
     final javax.xml.parsers.SAXParser        saxParser = saxParserFactory.newSAXParser(); 
     final org.xml.sax.XMLReader              parser    = saxParser.getXMLReader(); 
     return parser; }}
-

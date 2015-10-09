@@ -47,7 +47,14 @@ public class YComparator implements Comparator<GenericSegment>
 		double y1 = obj1.getY1();
 		double y2 = obj2.getY1();
 
-		return (int) (y2 - y1);
+		if (y1-y2>0.0)
+			return 1;
+		else if (y1-y2<0.0)
+			return -1;
+		else
+			return 0;
+
+		//return (int) (y2 - y1); THIS WAS THE ORIGINAL CODE: SAGNIK
 	}
 
 	public boolean equals(Object obj)
