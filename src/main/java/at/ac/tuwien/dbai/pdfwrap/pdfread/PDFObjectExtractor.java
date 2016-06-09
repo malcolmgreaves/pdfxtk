@@ -1282,7 +1282,7 @@ end commented out 1.1 */
             {
                 throw new IOException("Error decrypting document, details: " + e.getMessage());
             }
-            catch (InvalidPasswordException e)
+            catch (Exception e)
             {
                 throw new IOException("Error: document is encrypted");
             }
@@ -1357,7 +1357,7 @@ end commented out 1.1 */
             {
                 throw new IOException("Error decrypting document, details: " + e.getMessage());
             }
-            catch (InvalidPasswordException e)
+            catch (Exception e)
             {
                 throw new IOException("Error: document is encrypted");
             }

@@ -5,7 +5,7 @@ import PublishHelpers._
 // GAV
 //
 lazy val pName  = "pdfXtk"
-lazy val semver = SemanticVersion(0, 10, 3, isSnapshot = false)
+lazy val semver = SemanticVersion(0, 10, 4, isSnapshot = false)
 organization   := "io.malcolmgreaves"
 name           := pName
 version        := semver.toString
@@ -21,14 +21,15 @@ javacOptions in (doc)              ++= Seq("-source", javaVersion)
 
 // dependencies and their resolvers
 //
+lazy val pdfboxV = "1.8.12"
 libraryDependencies ++= Seq(
   "commons-collections" % "commons-collections" % "3.1"
   , "commons-lang" % "commons-lang" % "2.4"
   , "commons-io" % "commons-io" % "2.4"
   , "xstream" % "xstream" % "1.2.2"
-  , "org.apache.pdfbox" % "pdfbox" % "1.8.1"
-  , "org.apache.pdfbox" % "fontbox" % "1.8.1"
-  , "org.apache.pdfbox" % "pdfbox-app" % "1.8.1"
+  , "org.apache.pdfbox" % "pdfbox" % pdfboxV
+  , "org.apache.pdfbox" % "fontbox" % pdfboxV
+  , "org.apache.pdfbox" % "pdfbox-app" % pdfboxV
   , "log4j" % "log4j" % "1.2.14"
   , "xerces" % "xerces" % "2.4.0"
   // testing

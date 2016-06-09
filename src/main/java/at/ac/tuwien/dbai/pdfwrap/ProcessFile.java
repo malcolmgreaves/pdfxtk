@@ -137,18 +137,20 @@ public class ProcessFile
             if( document.isEncrypted() ) {
                 try {
                     document.decrypt( password );
-                } catch( InvalidPasswordException e ) {
-                    if(!(password == null || password == "")){//they supplied the wrong password
-                        throw new DocumentProcessingException
-                                ("Error: The supplied password is incorrect.");
-                    }
-                    else {
-                        //they didn't suppply a password and the default of "" was wrong.
-                        throw new DocumentProcessingException
-                                ( "Error: The document is encrypted." );
-                    }
                 } catch (CryptographyException e) {
                     throw new DocumentProcessingException(e);
+
+                } catch( Exception e ) {
+                    if (!(password == null || password == "")) {//they supplied the wrong password
+                        throw new DocumentProcessingException(
+                                "Error: The supplied password is incorrect."
+                        );
+                    } else {
+                        //they didn't suppply a password and the default of "" was wrong.
+                        throw new DocumentProcessingException(
+                                "Error: The document is encrypted."
+                        );
+                    }
                 }
             }
 
@@ -230,25 +232,24 @@ public class ProcessFile
     //      document.print();
             if( document.isEncrypted() )
             {
-                try
-                {
+                try {
                     document.decrypt( password );
-                }
-                catch( InvalidPasswordException e )
-                {
+
+                } catch (CryptographyException e) {
+                    throw new DocumentProcessingException(e);
+
+                } catch(Exception e) {
                     if(!(password == null || password == ""))//they supplied the wrong password
                     {
                         throw new DocumentProcessingException
-                            ("Error: The supplied password is incorrect.");
+                                ("Error: The supplied password is incorrect.");
                     }
                     else
                     {
                         //they didn't suppply a password and the default of "" was wrong.
                         throw new DocumentProcessingException
-                            ( "Error: The document is encrypted." );
+                                ( "Error: The document is encrypted." );
                     }
-                } catch (CryptographyException e) {
-                    throw new DocumentProcessingException(e);
                 }
             }
     
