@@ -5,7 +5,7 @@ import PublishHelpers._
 // GAV
 //
 lazy val pName  = "pdfXtk"
-lazy val semver = SemanticVersion(0, 10, 4, isSnapshot = false)
+lazy val semver = SemanticVersion(0, 10, 5, isSnapshot = false)
 organization   := "io.malcolmgreaves"
 name           := pName
 version        := semver.toString
