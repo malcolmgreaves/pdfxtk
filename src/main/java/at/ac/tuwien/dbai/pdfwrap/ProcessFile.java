@@ -41,14 +41,12 @@ import at.ac.tuwien.dbai.pdfwrap.model.graph.AdjacencyGraph;
 import at.ac.tuwien.dbai.pdfwrap.pdfread.PDFObjectExtractor;
 import at.ac.tuwien.dbai.pdfwrap.pdfread.PDFPage;
 import at.ac.tuwien.dbai.pdfwrap.utils.Utils;
-import org.apache.log4j.Logger;
+
 import org.apache.pdfbox.exceptions.CryptographyException;
-import org.apache.pdfbox.exceptions.InvalidPasswordException;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
-import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.xml.serialize.OutputFormat;
 import org.apache.xml.serialize.XMLSerializer;
+
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
@@ -75,8 +73,6 @@ public class ProcessFile
 	// TODO: move somewhere sensible!  this is a global var, at least for GUI
 	// moved to GUI 30.11.06
 	//public static float XML_RESOLUTION = 150;
-	
-    private static final Logger LOG = Logger.getLogger( ProcessFile.class );
 
     /**
      * This is the default encoding of the text to be output.
