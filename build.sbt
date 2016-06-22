@@ -30,7 +30,6 @@ libraryDependencies ++= Seq(
   , "org.apache.pdfbox" % "pdfbox" % pdfboxV
   , "org.apache.pdfbox" % "fontbox" % pdfboxV
   , "org.apache.pdfbox" % "pdfbox-app" % pdfboxV
-  , "log4j" % "log4j" % "1.2.14"
   , "xerces" % "xerces" % "2.4.0"
   // testing
   , "junit" % "junit" % "4.11" % Test
